@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +6,14 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* Body */
 body {
   line-height: 1.6;
   background-color: #c2a7f3;
   text-align: center;
 }
 
+/* Header */
 header {
   background: #2d0349;
   color: #ffffff;
@@ -32,6 +35,7 @@ header nav ul li a {
   text-decoration: none;
 }
 
+/* Hero Section */
 .hero {
   margin: 50px 0;
 }
@@ -56,6 +60,7 @@ header nav ul li a {
   margin-bottom: 9px;
 }
 
+/* Section */
 section {
   padding: 50px 20px;
 }
@@ -66,58 +71,62 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Projetos */
 #projetos {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
-.project-item h3 {
-  margin: 15px;
-}
+
 .project-item {
   background: #fff;
-  border: 0.5px medium #2b1781;
+  border: 0.5px solid #2b1781;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(136, 11, 209, 0.767);
   text-align: center;
-  
 }
 
+.project-item h3 {
+  margin: 15px;
+}
+
+/* Formação */
 #formacao {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.formacao-item {
+  background: #fff;
+  border: 0.5px solid #8876db;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(136, 11, 209, 0.767);
+  text-align: center;
 }
 
 .formacao-item h3 {
   margin: 15px;
 }
 
-.formacao-item {
-  background: #fff;
-  border: 0.5px medium #8876db;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(136, 11, 209, 0.767);
-  text-align: center;
-  
-}
-
+/* Habilidades */
 ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-#habilidades{
-  text-align: center;
 
+#habilidades {
+  text-align: center;
 }
+
 ul li {
   background: #8c00ff;
   color: white;
@@ -125,6 +134,7 @@ ul li {
   border-radius: 5px;
 }
 
+/* Footer */
 footer {
   background: #333;
   color: #fff;
@@ -132,63 +142,63 @@ footer {
   padding: 10px;
 }
 
-p{
+p {
   text-align: center;
   padding: 5px;
-  float: inline;
 }
 
-
-.galeria-item h3 {
-  margin: 15px;
-}
-
-.galeria-item {
-  background: #fff;
-  border: 0.5px medium #8876db;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(136, 11, 209, 0.767);
-  text-align: center;
-  
-}
-
+/* Galeria */
 #galeria {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.imagem {
-  position: relative;
+.galeria-item {
+  background: #fff;
+  border: 0.5px solid #8876db;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(136, 11, 209, 0.767);
   text-align: center;
-  padding: 50px;
-  background-color: #f4f4f4; /* Você pode ajustar essa cor ou usar uma imagem de fundo */
 }
 
-/* CSS para a imagem de perfil */
-  .profile-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /* Tornar a imagem circular */
-    margin-bottom: 20px;
-  }
-  
-  .project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Deixa os cantos arredondados */
-  }
+.galeria-item h3 {
+  margin: 15px;
+}
 
-  #sobre{
+/* Sobre */
+#sobre {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   margin-left: 350px;
   }
+
+/* Imagem */
+.imagem {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 70%;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
