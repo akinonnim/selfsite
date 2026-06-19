@@ -3,68 +3,93 @@
   padding: 0;
   font-family: 'Ubuntu Mono', 'monospace';
   font-optical-sizing: auto;
-  font-optical-sizing: 5rem;
-  font-weight: 500px;
+  font-weight: auto;
   font-style: normal;
 }
 
 body {
-  margin: 20px;
+  margin: 0 20px;
   padding: 20px;
   /* border: solid; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* background-image: linear-gradient(to bottom left, #ddcdb5, #c7b8a942); */
   background-image: linear-gradient(
     to bottom left,
-    #ddcdb5,
     #ada09442,
+    #ddcdb5,
     #a59987
   );
 }
-/*Navbar*/
+/* Navbar*/
 .nav-container {
+  max-width: 1200px; /* mesma largura das sections */
+  margin: 2rem auto;
+  padding: 0.5rem 2.5rem; /* padding vertical menor, horizontal igual */
+  background-color: #fbf6f0;
+  border-radius: 12px;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 80px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  /* border: solid; */
-  border-radius: 12px;
-  background-color: #eee8e2;
+  justify-content: space-between; /* logo à esquerda, menu à direita */
+  flex-wrap: wrap; /* quebra em telas pequenas se necessário */
+  gap: 1rem 2rem; /* espaço entre logo e menu */
 }
-.Navbar {
-  width: 100%;
-  /* background-color: aqua; */
+
+.nav-logo {
+  flex-shrink: 0; /* impede que a logo encolha */
+}
+
+.nav-logo img {
+  max-width: 100px;
+  height: 80px;
+  display: block; /* remove espaços extras */
   padding: 0.5rem 0;
-  display: flex;
-  justify-content: center;
+}
+.nav-logo img:hover {
+  transform: translateY(-3px);
 }
 .Navbar ul {
   list-style: none;
   display: flex;
-  gap: 6rem;
+  align-items: center;
+  gap: 3.5rem; /* espaço entre os links (ajuste seu gosto) */
   margin: 0;
   padding: 0;
 }
-.Navbar ul li {
-  float: none;
-}
+
 .Navbar ul li a {
-  display: block;
-  text-align: center;
+  display: inline-block; /* permite transform sem quebrar linha */
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
-  color: inherit;
+  color: #1e1e1e;
+  padding: 0.5rem 0.2rem; /* pequeno padding para área de clique */
+  position: relative; /* para possíveis efeitos (opcional) */
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
+
+/* Efeito hover sem deslocar outros itens */
 .Navbar ul li a:hover {
-  color: #cfc2af;
-  transform: scale(1.05);
-  transform: translateY(-4px);
-  border-radius: 8px;
-  /* padding: 0.5rem 1rem; */
+  color: #6f7274;
+  transform: translateY(-3px); /* sobe levemente, sem mexer no tamanho */
+}
+
+/* (Opcional) sublinhado animado – não altera posição */
+.Navbar ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #6f7274;
+  transition: width 0.3s ease;
+}
+
+.Navbar ul li a:hover::after {
+  width: 100%;
 }
 
 /*geral de sections containeres*/
@@ -76,14 +101,14 @@ body {
   /* background-color: #fcf7f1; */
   background-image: linear-gradient(to bottom, #fcf7f1, #fbf9f7c3);
 
-  min-height: 400px;
-  height: fit-content;
+  min-height: 300px;
+  /* height: fit-content; */
   border-radius: 12px;
 }
 /*Seção sobre*/
 
 #about {
-  padding: 3rem;
+  /* padding: 3rem; */
   /* border: solid; */
   display: flex;
   flex-direction: row;
@@ -91,21 +116,49 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .info {
   height: fit-content;
-  width: 1200px;
-  padding: 2.5rem;
+  width: 100%;
+  /* padding: 2.5rem; */
   /* border: solid red; */
   display: flex;
   justify-content: space-around;
+  gap: 2rem;
 }
 .info-text {
   padding: 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   /* border: solid; */
   flex-direction: column;
+}
+.title {
+  height: fit-content;
+}
+.paragraph {
+  /* border: solid; */
+  width: 600px;
+  height: 210px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.info-text h1 {
+  color: #1e1e1e;
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+.info-text h2 {
+  font-style: italic;
+  /* margin-bottom: 2rem; */
+}
+.info-text p {
+  word-spacing: 0.5rem;
+  line-height: 1.5;
+  color: #555;
+  font-size: larger;
 }
 .imagem {
   min-width: 100px;
@@ -125,11 +178,6 @@ body {
   justify-items: center;
   margin: 1rem;
   padding: 2rem;
-}
-.item {
-  /* border: solid #8c8686; */
-  max-width: 250px;
-  height: 300px;
 }
 .experience-container .item {
   background-color: #fafafa;
@@ -306,10 +354,11 @@ body {
   background-color: #eee8e2;
 }
 .contact-item {
-  width: 350px;
+  /* width: 350px; */
   background-color: #ffffff;
   padding: 3rem 1rem;
   border-radius: 12px;
+  border: 1px solid #e0e0e0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -344,6 +393,16 @@ body {
 #contacts h1 {
   color: #0f172a;
   margin-bottom: 0.25rem;
+}
+
+.footer-credits {
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #fafafa;
+  background-color: #1e1e1e;
 }
 
 /* @media (max-width: 768px) {
