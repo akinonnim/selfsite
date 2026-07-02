@@ -8,31 +8,35 @@
 }
 
 body {
-  margin: 0 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   /* border: solid; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* background-image: linear-gradient(to bottom left, #ddcdb5, #c7b8a942); */
   background-image: linear-gradient(
     to bottom left,
     #ada09442,
-    #ddcdb5,
+    #f4e4cb,
     #a59987
   );
 }
 /* Navbar*/
 .nav-container {
   max-width: 1200px; /* mesma largura das sections */
-  margin: 2rem auto;
   padding: 0.5rem 2.5rem; /* padding vertical menor, horizontal igual */
+  margin: auto;
   background-color: #fbf6f0;
+  border-bottom: 8px solid #c1b299;
   border-radius: 12px;
-
   display: flex;
   align-items: center;
   justify-content: space-between; /* logo à esquerda, menu à direita */
   flex-wrap: wrap; /* quebra em telas pequenas se necessário */
   gap: 1rem 2rem; /* espaço entre logo e menu */
+  /*Posição fixa no topo*/
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -94,6 +98,9 @@ body {
 
 /*geral de sections containeres*/
 .section-container {
+  border-bottom: 8px solid #c1b299;
+  border-right: 8px solid #c1b299;
+
   max-width: 1200px;
   /* max-width: 1200px; */
   margin: 2rem auto;
@@ -167,8 +174,66 @@ body {
   border-radius: 10rem;
   /* border: solid; */
 }
+/*
+.skills-container {
+   border: solid;
+  display: flex;
+}
+
+.hard-skills,
+.soft-skills {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 500px;
+  height: auto;
+  margin: 20px;
+  padding: 2.5rem;
+  padding-left: 4rem;
+    transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+    .experience-container .
+}
+
+.soft-skills {
+} */
+
+.skills-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap; /* Adicionar */
+  justify-content: center; /* Adicionar */
+  gap: 20px; /* Substitui as margins fixas de 20px */
+}
+
+.hard-skills,
+.soft-skills {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 500px;
+  flex: 1 1 300px; /* Permite que encolham e cresçam de forma fluida */
+  min-width: 280px; /* Evita que fiquem muito finos */
+  height: auto;
+  padding: 2.5rem;
+  /* padding-left: 4rem; -> Remova para manter simetria ou use text-indent nos títulos */
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+/* ADICIONAR o hover que está faltando */
+.hard-skills:hover,
+.soft-skills:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
 #experience {
   /* border: solid green; */
+}
+.skill-sub {
+  line-height: 1.2rem;
 }
 .experience-container {
   /* border: rgb(111, 145, 139) solid; */
