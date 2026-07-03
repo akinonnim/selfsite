@@ -129,9 +129,10 @@ body {
   width: 100%;
   /* padding: 2.5rem; */
   /* border: solid red; */
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  gap: 2.5rem;
 }
 .info-text {
   padding: 1.5rem;
@@ -168,7 +169,7 @@ body {
   font-size: larger;
 }
 .imagem {
-  min-width: 100px;
+  max-width: 100%;
   min-height: 100px;
   border: 1px solid #c3b8b8;
   border-radius: 10rem;
@@ -214,7 +215,7 @@ body {
   border-radius: 12px;
   width: 500px;
   flex: 1 1 300px; /* Permite que encolham e cresçam de forma fluida */
-  min-width: 280px; /* Evita que fiquem muito finos */
+  /*min-width: 280px;  Evita que fiquem muito finos */
   height: auto;
   padding: 2.5rem;
   /* padding-left: 4rem; -> Remova para manter simetria ou use text-indent nos títulos */
@@ -237,12 +238,19 @@ body {
 }
 .experience-container {
   /* border: rgb(111, 145, 139) solid; */
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+  align-items: stretch;
+  grid-auto-flow: column;
+  align-content: space-evenly;
+  justify-items: stretch;
+  gap: 1.5rem;
+  justify-content: center;
   margin: 1rem;
-  padding: 2rem;
+  flex-wrap: wrap;
 }
 .experience-container .item {
   background-color: #fafafa;
@@ -410,8 +418,9 @@ body {
 }
 .contact-container {
   width: 100%;
-  height: 300px;
+  height: fit-content;
   border-radius: 12px;
+  padding: 1rem;
   margin: 1rem;
   display: flex;
   align-items: center;
@@ -470,153 +479,67 @@ body {
   background-color: #1e1e1e;
 }
 
-/* @media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
-} */
-
 /* ========== RESPONSIVIDADE ========== */
 
-/* Telas médias (tablets) */
-@media (max-width: 992px) {
-  /* Navbar */
-  .Navbar ul {
-    gap: 3rem; /* reduz espaçamento entre links */
-  }
-
-  /* About */
-  #about {
-    flex-direction: column; /* empilha a imagem e o texto */
-    padding: 2rem;
-  }
+@media (max-width: 768px) {
+  /*section de about*/
   .info {
-    width: 100%; /* tira a largura fixa de 1200px */
-    flex-direction: column; /* empilha os itens */
-    align-items: center;
+    grid-auto-flow: row;
+    gap: 1.5rem;
   }
   .info-text {
-    padding: 1rem;
+    padding: 20px;
+    grid-column: auto;
+    /* border: solid; */
+    width: fit-content;
   }
-  .imagem {
-    min-width: 120px;
-    min-height: 120px;
+  .paragraph {
+    margin: 15px;
+    /* border: solid red; */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 1.8rem;
   }
+} /*section experience*/
 
-  /* Experience */
-  .experience-container {
-    grid-template-columns: 1fr 1fr; /* mantém 2 colunas, mas os cards vão se ajustar */
-    gap: 1rem;
-    padding: 1rem;
+@media (max-width: 375px) {
+  .nav-container {
+    flex-wrap: wrap;
   }
-
-  /* Projects */
-  .projects-container {
-    grid-template-columns: 1fr 1fr; /* mantém 2 colunas */
-  }
-
-  /* Contacts */
-  .contact-container {
-    height: auto; /* remove altura fixa */
-    flex-wrap: wrap; /* permite que os cards quebrem para a linha de baixo */
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-  }
-  .contact-item {
-    width: 280px; /* largura um pouco menor para caber dois por linha */
-    padding: 2rem 1rem;
-  }
-}
-
-/* Telas pequenas (celulares) */
-@media (max-width: 768px) {
-  /* Navbar */
   .Navbar ul {
-    flex-direction: row; /* empilha os links verticalmente */
-    gap: 1rem;
-    align-items: center;
-  }
-  .Navbar ul li a {
-    font-size: 1rem;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding-top: 1rem;
   }
 
-  /* About */
-  #about {
-    padding: 1.5rem;
-  }
-  .info {
-    padding: 1rem;
-  }
-  .info-text h2 {
-    font-size: 1.5rem;
-  }
-  .info-text p {
-    font-size: 0.95rem;
-  }
-  .imagem {
-    min-width: 100px;
-    min-height: 100px;
-  }
-
-  /* Experience */
   .experience-container {
-    grid-template-columns: 1fr; /* vira uma coluna só */
-    gap: 1rem;
-    padding: 0.5rem;
+    grid-auto-flow: row;
+    gap: 1.5rem;
   }
   .item {
-    max-width: 100%;
+    padding: 0;
+    border: solid 4px;
+    width: 100%;
   }
-
-  /* Projects */
+  .skills-container {
+    grid-auto-flow: row;
+    gap: 1.5rem;
+  }
+  .hard-skills {
+  }
+  /*projects*/
   .projects-container {
-    grid-template-columns: 1fr; /* vira uma coluna só */
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
   }
-  .project-thumbnail {
-    height: 140px; /* reduz altura da imagem */
+  .project-item {
   }
-
-  /* Contacts */
+  /*contacts*/
   .contact-container {
-    flex-direction: column; /* empilha os cards verticalmente */
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem 1rem;
-  }
-  .contact-item {
-    width: 100%; /* ocupa toda a largura disponível */
-    max-width: 400px; /* limita para não ficar muito largo */
-    padding: 1.5rem 1rem;
-  }
-  #contacts h1 {
-    font-size: 1.6rem;
-  }
-}
-
-/* Telas muito pequenas (celulares menores) */
-@media (max-width: 480px) {
-  body {
-    margin: 10px;
-  }
-  .section-container {
-    padding: 1.5rem 1rem;
-    margin: 1rem auto;
-  }
-  .Navbar ul {
-    gap: 0.8rem;
-  }
-  .Navbar ul li a {
-    font-size: 0.9rem;
-  }
-  .contact-item {
-    padding: 1rem;
-  }
-  .contact-item h3 {
-    font-size: 1rem;
-  }
-  .contact-item a {
-    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
