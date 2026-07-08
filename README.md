@@ -31,7 +31,9 @@
 - **Google Fonts** – Ubuntu Mono e Segoe UI (fallback)
 
 ## 👤 Autor
+
  **Wesley Oliveira**
+ 
 Analista de Sistemas e Engenheiro de Software em Formação. 
 
 - LinkedIn: [Wesley G. Oliveira](https://www.linkedin.com/in/wesley-g-oliveira/)
