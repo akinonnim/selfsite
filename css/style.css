@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu Mono', monospace;
-  font-optical-sizing: auto;
-  font-weight: auto;
   font-style: normal;
 }
 
@@ -122,7 +120,6 @@ body {
   gap: 2.5rem;
 }
 .info-text {
-  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -132,16 +129,24 @@ body {
   height: fit-content;
 }
 .paragraph {
-  width: 37.5rem;
+  width: 35.5rem;
   height: 13rem;
   align-items: center;
   justify-content: center;
   display: flex;
 }
+.bold {
+  font-weight: 800;
+  font-style: oblique;
+}
+.title-span {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
 .info-text h1 {
   color: #1e1e1e;
-  font-size: 3.5rem;
-  font-weight: bolder;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 .info-text h2 {
   font-style: italic;
@@ -158,6 +163,32 @@ body {
   border: 0.0625rem solid #c3b8b8;
   border-radius: 10rem;
 }
+
+.info-buttons {
+  height: 5rem;
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.btn1,
+.btn2 {
+  height: 2.8rem;
+  width: 5.9rem;
+  padding: 0.5rem;
+  border: solid #ddd 0.0625rem;
+  border-radius: 0.75rem;
+}
+.btn1 {
+  background-color: #c1b299;
+}
+.btn2{
+  background-color:#fafafa ;
+}
+
+
 #tech-section {
   min-height: fit-content;
 }
