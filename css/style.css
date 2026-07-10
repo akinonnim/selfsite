@@ -113,11 +113,10 @@ body {
 .info {
   height: fit-content;
   width: 100%;
-
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-flow: column;
-  gap: 2.5rem;
+  align-items: center;
 }
 .info-text {
   display: flex;
@@ -129,6 +128,7 @@ body {
   height: fit-content;
 }
 .paragraph {
+  margin-top: 1.5rem;
   width: 35.5rem;
   height: 13rem;
   align-items: center;
@@ -149,13 +149,17 @@ body {
   font-weight: 800;
 }
 .info-text h2 {
-  font-style: italic;
+  font-weight: 400;
+  font-size: x-large;
 }
 .info-text p {
   word-spacing: 0.5rem;
-  line-height: 1.5;
+  line-height: 1.8rem;
   color: #555;
-  font-size: larger;
+  font-size: 1.5rem;
+}
+.image {
+  width: 30rem;
 }
 .imagem {
   max-width: 100%;
@@ -184,10 +188,9 @@ body {
 .btn1 {
   background-color: #c1b299;
 }
-.btn2{
-  background-color:#fafafa ;
+.btn2 {
+  background-color: #fafafa;
 }
-
 
 #tech-section {
   min-height: fit-content;
