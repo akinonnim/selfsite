@@ -11,12 +11,11 @@
     </style>
     <title>Akin Dev</title>
   </head>
+
   <body>
     <section class="nav-container">
       <div class="nav-logo"> 
-
           <img src="img/onnim.png" alt="logo">
-
       </div>
       <nav class="Navbar"> 
         <ul>
@@ -32,25 +31,32 @@
       <div class="info">
         <div class="info-text">
           <div class="title">
-            <h1>Wesley Oliveira</h1>
+            <h1><span class="title-span">W</span>esley <span class="title-span">O</span>liveira</h1>
           </div>
           <div class="paragraph">
-            <p>Analista de Sistemas com foco em Engenheiria de Software, apaixonado por tecnologia e desenvolvimento de soluções.
+            <p>Analista de Sistemas com foco em Engenharia de Software, apaixonado por tecnologia e desenvolvimento de soluções.
             Aqui, você pode acompanhar minha trajetória profissional, experiências e projetos.
           </p>
           </div> 
           
+          <div class="info-buttons">
+            <a href="assets/Curriculo_Wesley_Oliveira.pdf" download="Curriculo_Wesley_Oliveira.pdf" class="btn1">Baixe meu Curriculo</a>
+            <a href="#projects" class="btn2">Veja meus projetos</a>
+
+            <!-- <button class="btn1"><a href="#projects"></a>Projetos</button>
+            <button class="btn2">Contate-me</button> -->
+          </div>
           <h2> Bem vindo ao meu portfólio!</h2>
         </div>
-        <div class="image">
+
+        <div class="image-div">
           <img
-            class="imagem"
-            src="https://media.licdn.com/dms/image/v2/D4D03AQGPiKcBAkTOpA/profile-displayphoto-shrink_400_400/B4DZUja.xjG4Ag-/0/1740056031727?e=1783555200&v=beta&t=elK3ZWuflTCEI5rpdrdG7ZFWVghHY2-uCHo7Rb-t1BE"
+            class="image"
+            src="https://media.licdn.com/dms/image/v2/D4D03AQGPiKcBAkTOpA/profile-displayphoto-shrink_400_400/B4DZUja.xjG4Ag-/0/1740056031727?e=1785369600&v=beta&t=1wzcr0IMqfHzWlDrz0LTwwxEl8U2JQUY7Y6q5pNfNlc"
           />
         </div>
       </div>
     </section>
-
 
     <section class="section-container" id="experience">
       <h1>Minha experiêcia profissional</h1>
@@ -58,19 +64,19 @@
         <div class="item">
           <div class="item-header">
             <h3>Programador Júnior</h3>
-            <span class="empresa">Banco Ipê Bank</span>
+            <span class="enterprise">Banco Ipê Bank</span>
           </div>
-          <div class="item-periodo">
+          <div class="item-period">
             <span class="data">Abr 2025 – Nov 2025</span>
             <span class="local">Barueri/SP</span>
           </div>
-          <div class="item-descricao">
+          <div class="item-description">
             <p>
-              Desenvolvimento de features em React/Bun, deploy em Linux,
-              manutenção de servidores e backups.
+              Desenvolvimento de features em React/Bun utilizando React Router, deploy,
+              manutenção de servidor Linux e backups, containerização Docker de serviços.
             </p>
           </div>
-          <div class="item-tecnologias">
+          <div class="item-tech">
             <span class="tag">React</span>
             <span class="tag">Bun</span>
             <span class="tag">Docker</span>
@@ -78,23 +84,22 @@
           </div>
         </div>
 
-
         <div class="item">
           <div class="item-header">
             <h3>Analista em Desenvolvimento JR/QA Tester</h3>
-            <span class="empresa">Instituto de Referência Negra Peregun</span>
+            <span class="enterprise">Instituto de Referência Negra Peregun</span>
           </div>
-          <div class="item-periodo">
+          <div class="item-period">
             <span class="data">Mar 2024 – Ago 2024</span>
             <span class="local">São Paulo/SP</span>
           </div>
-          <div class="item-descricao">
+          <div class="item-description">
             <p>
-              Prototipação, documentação de funcionalidades, testes e
-              comunicação entre times.
+              Prototipação, documentação de funcionalidades para plataforma de ensino EaD, testes de funcionalidades e
+              comunicação entre times de desenvolvimento e gestão.
             </p>
           </div>
-          <div class="item-tecnologias">
+          <div class="item-tech">
             <!-- <span class="tag">UML</span> -->
             <span class="tag">Figma</span>
             <span class="tag">Adobe XD</span>
@@ -107,17 +112,17 @@
             <h3>Estágio</h3>
             <span class="empresa">EDUCAFRO</span>
           </div>
-          <div class="item-periodo">
+          <div class="item-period">
             <span class="data">Abr 2023 – Ago 2023</span>
             <span class="local">São Paulo/SP</span>
           </div>
-          <div class="item-descricao">
+          <div class="item-description">
             <p>
               Suporte técnico, manutenção de computadores e resolução de
-              incidentes.
+              incidentes, consultoria de melhoria de processos de tecnologia.
             </p>
           </div>
-          <div class="item-tecnologias">
+          <div class="item-tech">
             <span class="tag">Hardware</span>
             <span class="tag">Redes</span>
             <span class="tag">Windows</span>
@@ -130,44 +135,23 @@
     <section class="section-container" id="tech-section">
       <h1>Tecnologias</h1>
       <div class="tech-container">
-        <div class="grid-technologies">
-          <div class="grid-tech-item">
-            <h2 class="tech-item-title">Frontend</h2>
-            <div class="tech-tag-container">
-            <span class="tech-tag">UX/UI</span>
-            <span class="tech-tag">HTML5</span>
-            <span class="tech-tag">CSS3</span>
-            <span class="tech-tag">JS</span>            
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Typescript</span>
-            </div>
+        <div class="tech-item">
+          <div class="item-header">
+            <h3>Frontend</h3>
+            <span class="">Habilidades com sistemas web</span>
           </div>
-
-          <div class="grid-tech-item">
-    
-            <h2 class="tech-item-title">Backend</h2>
-            <div class="tech-tag-container">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Springboot</span>
-            <span class="tech-tag">Jenkins</span>
-            <span class="tech-tag">SQL</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">SQL Server</span>
-          </div>
-        </div>
-
-          <div class="grid-tech-item">
-            <h2 class="tech-item-title">Infraestrutura</h2>
-            <div class="tech-tag-container">
-            <span class="tech-tag">Linux Server</span>
-            <span class="tech-tag">NextCloud</span>
-            <span class="tech-tag">Docker</span>
+          <div class="tech-item-tags">
+            <span class="tag">React</span>
+            <span class="tag">Bun</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Bootstrap</span>
           </div>
         </div>
         </div>
       </div>
     </section>
-
 
     <section class="section-container" id="projects">
       <h1>Meus projetos Relevantes</h1>
@@ -212,7 +196,7 @@
             <div class="project-header">
               <h3 class="project-title">Biblioteca Pessoal Java</h3>
               <div class="project-links">
-                <a href="#">🔗 Ver Demo</a>
+                <!-- <a href="#">🔗 Ver Demo</a> -->
                 <a
                   href="https://github.com/akinonnim/RoadMap-Pessoal---JAVA-BACKEND"
                   >🐙 GitHub</a
@@ -229,6 +213,32 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto 3  -->
+        <div class="project-item">
+          <div class="project-thumbnail">
+            <de>🏦 Site de Apresentação: <br>Curso Técnico em  Desenvolvimento de Sistemas - Etec de Embu</span>
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">Landing Page DSN - Etec de Embu</h3>
+              <div class="project-links">
+                <a href="https://akinonnim.github.io/Course-Presentationv2/">🔗 Ver Demo</a>
+                <a href="https://github.com/akinonnim/Course-Presentationv2">🐙 GitHub</a>
+              </div>
+            </div>
+            <p class="project-description">
+              Aplicação Frontend de divulgação do curso técnico em Desenvolvimento 
+              de Sistemas da Etec de Embu das artes, desenvolvido em HTML5, CSS3 e Javascript.
+            </p>
+            <div class="project-stack">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Claude AI</span>
+            </div>
+          </div>
+        </div> 
       </div>
     </section>
 
