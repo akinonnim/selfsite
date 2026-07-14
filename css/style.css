@@ -16,7 +16,8 @@ body {
     #75716b
   );
 }
-/* Navbar*/
+
+/* Navbar */
 .nav-container {
   max-width: 75rem;
   padding: 0.5rem 2.5rem;
@@ -89,19 +90,19 @@ body {
   width: 100%;
 }
 
+/* Seções principais - estilo geral */
 .section-container {
   border-bottom: 0.5rem solid #c1b299;
   border-right: 0.5rem solid #c1b299;
-
   max-width: 75rem;
   margin: 2rem auto;
   padding: 2.5rem;
   background-image: linear-gradient(to bottom, #fcf7f1, #fbf9f7c3);
-
   min-height: 18.75rem;
   border-radius: 0.75rem;
 }
 
+/* ===== ABOUT ===== */
 #about {
   display: flex;
   flex-direction: row;
@@ -192,81 +193,9 @@ body {
   background-color: #fafafa;
 }
 
-#tech-section {
-  min-height: fit-content;
-}
-.tech-container {
-  display: grid;
-  grid-auto-flow: column;
-  justify-items: center;
-  align-items: center;
-  margin: 1rem;
-}
-.grid-technologies {
-}
-.tech-container .tech-item {
-  background-color: #fafafa;
-  border: 0.0625rem solid #ddd;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  width: 25rem;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
-.tech-tag-container {
-  margin-top: 1.8rem;
-  line-height: 2.2rem;
-}
-.tech-item-title {
-  padding-bottom: 1.5rem;
-  border-bottom: 0.0625rem dashed #e0e0e0;
-}
-.tech-item .item-header {
-  /* border: solid red; */
-  width: 10rem;
-  padding: 1.5rem;
-  justify-content: space-between;
-  border-right: 0.0925rem dashed #e0e0e0;
-  line-height: 1.5rem;
-}
-
-.tech-item-tags {
-  display: flex;
-  /* border: solid; */
-  width: 15rem;
-  flex-direction: row;
-  align-content: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
-.tech-container .tech-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-}
-.tech-tag {
-  margin: 0.6rem;
-  padding: 0.3rem;
-
-  background-color: #e9ecef;
-  border-radius: 1.25rem;
-  font-weight: 500;
-  color: #2c3e50;
-}
-.item-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: auto;
-}
-
+/* ===== EXPERIENCE ===== */
 #experience {
+  /* vazio, mas mantido */
 }
 .skill-sub {
   line-height: 1.2rem;
@@ -346,6 +275,86 @@ body {
   color: #2c3e50;
 }
 
+/* ===== TECH ===== */
+#tech-section {
+  min-height: fit-content;
+}
+.tech-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+}
+.grid-technologies {
+  /* vazio */
+}
+.tech-item {
+  display: flex;
+  background-color: #fafafa;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.tech-tag-container {
+  margin-top: 1.8rem;
+  line-height: 2.2rem;
+  grid-template-columns: repeat(auto-fit);
+}
+.tech-item-title {
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem dashed #e0e0e0;
+}
+.tech-item .item-header {
+  width: 10rem;
+  padding: 1.5rem;
+  border-right: 0.0925rem dashed #e0e0e0;
+  line-height: 1.5rem;
+}
+
+.tech-item-tags {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 15rem;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.tech-container .tech-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+.tech-item .tag {
+  margin: 0.6rem;
+  padding: 0.3rem;
+  background-color: #e9ecef;
+  border-radius: 1.25rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+.item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+/* ===== PROJECTS ===== */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -432,7 +441,7 @@ body {
   color: #2c3e50;
 }
 
-/*Contacts*/
+/* ===== CONTACTS ===== */
 #contacts {
   display: flex;
   flex-direction: column;
@@ -493,6 +502,7 @@ body {
   margin-bottom: 0.25rem;
 }
 
+/* ===== FOOTER ===== */
 .footer-credits {
   width: 100%;
   height: 5rem;
@@ -504,7 +514,6 @@ body {
 }
 
 /* ========== RESPONSIVIDADE ========== */
-
 @media (max-width: 768px) {
   /*section de about*/
   .info {
@@ -532,8 +541,6 @@ body {
     justify-items: center;
   }
   /*section de tecnologias*/
-  .tech-container {
-  }
   .tech-container {
     grid-auto-flow: row;
     justify-items: center;
