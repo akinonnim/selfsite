@@ -544,6 +544,10 @@ body {
     justify-items: center;
     gap: 1.5rem;
   }
+  .tech-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
   .contact-container{
     gap:2rem;
   }
